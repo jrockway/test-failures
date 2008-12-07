@@ -21,7 +21,7 @@
                     (save-excursion (end-of-line) (point))))))
 
 (defmacro define-test-result-overlay-change-command (var color)
-  `(defun ,(intern (format "add-test-%s" var)) (file line)
+  `(defun ,(intern (format "report-test-%s" var)) (file line)
      (interactive "fFile: \nnLine: ")
      (let ((overlay (test-failure--make-overlay file line)))
        (push overlay ,(intern (format "test-failure-%s-overlays" var)))

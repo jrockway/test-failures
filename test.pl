@@ -26,9 +26,8 @@ sub ok {
     }
 }
 
-ok 2 + 2 == 5, '2 + 2 is 5';
+ok 2 - 3 > 0, "you can't take three from two";
 
-sleep 2;
+ok 2 < 3, "two is less than three";
 
-ok 2 - 2 == 0, '2 from 2 is zero';
-
+ok 40 =~ /4.$/, "so you look at the four in the tens place";
